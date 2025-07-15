@@ -8,6 +8,8 @@ public class RunStatementExample {
 		int result = x + y ; // 변수 result를 선언하고 x와 y를 더한 값을 저장
 		System.out.println(result); // 콘솔에 출력
 		// git 업데이트 추가
+		
+		// commit 메시지 연습
 	}
 
 }
