@@ -9,9 +9,14 @@ public class homework4 {
 		// 유니코드 출력하기
 		
 		Scanner sc = new Scanner(System.in);
-		char a;
+		String a;
+//		char b = 'A';
 		
-
+		a = sc.next();
+		
+		System.out.println((int) a.charAt(0)); // 입력 받은 값은 문자열로 입력되지만 chatAt()을 사용하면 char로 형변환
+//		System.out.println((int)b);
+		
 		
 	}
 
