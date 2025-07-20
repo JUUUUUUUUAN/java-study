@@ -63,11 +63,12 @@ public class WhileSumFrom1To100Example {
 		int j = 1;
 		
 		while (j <= 100) {
-			if (j % 2 != 0) {
+			if (j % 2 != 0 ) {
 				sum += j;
-				j++;
 			}
+				j++;
 		}
+		 
 		System.out.println(sum);
 		
 		// Quiz2:
