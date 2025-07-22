@@ -18,7 +18,6 @@ public class Homework3 {
 		
 		int min = 0;
 		
-		System.out.print("세 수 중에서 가장 작은 수는 ");
 //		if (num1 < num2 && num1 < num3) {
 //			System.out.println( num1 + "입니다.");
 //		} else if (num2 < num1 && num2 < num3) {
@@ -35,7 +34,7 @@ public class Homework3 {
 			min = num3;
 		}
 		
-		System.out.println(min);
+		System.out.println("세 수 중에서 가장 작은 수는 " + min);
 		
 	}
 

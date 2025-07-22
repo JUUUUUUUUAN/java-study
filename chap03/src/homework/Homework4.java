@@ -2,7 +2,7 @@ package homework;
 
 import java.util.Scanner;
 
-public class homework4 {
+public class Homework4 {
 
 	public static void main(String[] args) {
 		
@@ -17,8 +17,10 @@ public class homework4 {
 		System.out.print("영어: ");
 		int english = sc.nextInt();
 		
+		// 합계
 		int sum = korean + math + english;
-		int ave = sum / 3;
+		// 평균
+		double ave = sum / 3.0;
 		
 		System.out.println("합계: " + sum + "점");
 		System.out.println("평균: " + ave + "점");

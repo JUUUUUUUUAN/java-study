@@ -21,18 +21,18 @@ public class Homework6 {
 		System.out.print("정보시스템구축관리 점수: ");
 		int sys = sc.nextInt();
 		
-		int ave = ( sw1 + sw2 + db + lang + sys) / 5 ;
+		double ave = ( sw1 + sw2 + db + lang + sys) / 5.0 ;
 		
 		if (ave >= 60) {
 			if ( sw1 >= 60 && sw2  >= 60 && db >= 60 && lang >= 60 && sys >= 60 ) {
 				System.out.println("합격을 축하합니다!");
-			} else if (sw1 < 60) {
+			} else if (sw1 < 40) {
 					System.out.println("소프트웨어설계 과목 과락으로 불합격입니다.");
-			} else if (sw2 < 60) {
+			} else if (sw2 < 40) {
 					System.out.println("소프트웨어개발 과목 과락으로 불합격입니다.");
-			} else if (db < 60) {
+			} else if (db < 40) {
 					System.out.println("데이터베이스 과목 과락으로 불합격입니다.");
-			} else if (lang < 60) {
+			} else if (lang < 40) {
 					System.out.println("프로그래밍언어활용 과목 과락으로 불합격입니다.");
 			} else {
 				

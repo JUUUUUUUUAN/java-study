@@ -1,0 +1,37 @@
+package Homework;
+
+import java.util.Scanner;
+
+public class Homework2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		boolean flag = true;
+		
+		
+		while (flag) {
+			
+			System.out.print("숫자 : ");
+			int num = sc.nextInt();
+			
+			if (num == 0) break;
+			
+			if (num < 0) {
+				System.out.println("양수만 입력해주세요.");
+				continue;
+			} else if (num > 9) {
+				System.out.println("9이하의 숫자를 입력해주세요.");
+				continue;
+			} else {
+				for (int i = num; i <= 9; i++) {
+					for (int j = 1; j <= 9; j++) {
+						System.out.println(i + " x " + j + " = " + i * j);
+					}
+				}
+			}
+			flag = false;
+		}
+	}
+
+}
