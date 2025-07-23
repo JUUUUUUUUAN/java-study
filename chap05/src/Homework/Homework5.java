@@ -6,26 +6,23 @@ public class Homework5 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		boolean flag = true;
 		int sum = 0;
 		
-		while (flag) {
+		while (true) {
 			System.out.print("숫자(0을 입력하면 종료) : ");
 			int input = sc.nextInt();
 			
-			if (input == 0 ) {
-				System.out.println("양수의 합계: " + sum);
-				flag = false;
+			if (input == 0) 
 				break;
-			}
 			
-			if (input < 0 ) {
+			if (input < 0)
 				continue;
-			} else {
-				sum += input;
-			}
-			
-		}
-	}
 
+				sum += input;
+		}
+			System.out.println("양수의 합계: " + sum);
+	}
+		
 }
+
+

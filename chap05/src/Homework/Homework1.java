@@ -17,7 +17,7 @@ public class Homework1 {
 			System.out.print("정수(1~50) :");
 			int num = sc.nextInt();
 			
-			if (num > 51 || num < 0) {
+			if (num > 50 || num < 1) {
 				System.out.print("1~50 사이의 정수를 입력하세요. \n");	
 				continue;
 			} else {	

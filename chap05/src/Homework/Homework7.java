@@ -6,15 +6,13 @@ public class Homework7 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		boolean flag = true;
 		
-		while (flag) {
+		while (true) {
 			System.out.print("정수 :");
 			int num = sc.nextInt();
 			String output = "";
 			if (num <= 0) {
 				System.out.println("양수가 아닙니다.");
-				continue;
 			}
 			for (int i = 1; i <= num; i++) {
 				if (i % 2 == 1) {
@@ -24,7 +22,7 @@ public class Homework7 {
 				}
 			}
 			System.out.println(output);
-			flag = false;
+			break;
 		}
 	}
 

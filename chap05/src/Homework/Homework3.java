@@ -10,6 +10,7 @@ public class Homework3 {
 		for(;;) {
 			System.out.print("입력 : ");
 			String input = sc.nextLine();
+			
 			if ("탈출".equals(input)) {
 				break;
 			}

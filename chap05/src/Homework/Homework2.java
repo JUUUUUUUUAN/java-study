@@ -7,17 +7,15 @@ public class Homework2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		boolean flag = true;
-		
-		
-		while (flag) {
+		while (true) {
 			
 			System.out.print("숫자 : ");
 			int num = sc.nextInt();
 			
-			if (num == 0) break;
-			
-			if (num < 0) {
+			if (num == 0) {
+				System.out.println("프로그램을 종료합니다.");
+				break;
+			} else if (num < 0) {
 				System.out.println("양수만 입력해주세요.");
 				continue;
 			} else if (num > 9) {
@@ -25,12 +23,12 @@ public class Homework2 {
 				continue;
 			} else {
 				for (int i = num; i <= 9; i++) {
+					System.out.println("=== " + i +"단 ===");
 					for (int j = 1; j <= 9; j++) {
-						System.out.println(i + " x " + j + " = " + i * j);
+						System.out.println(i + " x " + j + " = " + (i * j));
 					}
 				}
 			}
-			flag = false;
 		}
 	}
 

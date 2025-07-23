@@ -8,7 +8,7 @@ public class Homework8 {
 		Scanner sc = new Scanner(System.in);
 		boolean flag = true;
 		
-		while (flag) {
+		while (true) {
 			System.out.print("문자열 :");
 			String str = sc.nextLine();
 			System.out.print("문자 :");
@@ -22,15 +22,15 @@ public class Homework8 {
 			}
 			System.out.println("포함된 개수 : " + count );
 			
-			while (flag) {
+			while (true) {
 				System.out.print("다시 입력하시겠습니까?");
 				String again = sc.nextLine();
 				
-				if ("n".equals(again) || "N".equals(again)) {
-					flag = false;
+				if ("n".equalsIgnoreCase(again)) { // 같은 의미 "n".equals(again) || "N".equals(again)
 					System.out.println("프로그램 종료");
-				} else if ("y".equals(again) || "Y".equals(again)) {
-					break;
+					return; // main 메소드 종료
+				} else if ("y".equalsIgnoreCase(again)) {
+					break; // 바깥 while 문으로 다시 돌아감
 				} else {
 					System.out.println("잘못된 대답입니다. 다시 입력해주세요.");
 					continue;
