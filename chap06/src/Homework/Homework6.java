@@ -14,25 +14,31 @@ public class Homework6 {
 		int count = 0;
 		int lastCount = 0;
 		
-		// 배열 생성
+		// 처음 배열 생성
 		String[] arr = new String[strNum];
 		for (int i = 0; i < arr.length; i++) {
 			count++;
 			System.out.print(count + "번째 문자열:");
 			arr[i] = sc.next();
 		}
+		
+		// 배열 추가 여부
 		while (true) {	
 			System.out.print("더 값을 입력하시겠습니까?(Y/N) :");
 			String again = sc.next();
 			
-			// 배열 추가하기
+			// 배열 추가
 			int plusNum = 0; // 추가할 행
 			if ("y".equalsIgnoreCase(again)) {
 				System.out.print("더 입력하고 싶은 개수 :");
-				plusNum = sc.nextInt();
-				lastCount = count + plusNum;
 				
+				// 추가할 행
+				plusNum = sc.nextInt();
+				// 행 추가하여 복사하기
 				arr = Arrays.copyOf(arr, count + plusNum);
+				
+				// 추가된 행에 값 넣기
+				lastCount = count + plusNum;
 				for (int i = count; i < lastCount; i++) {
 					count++;
 					System.out.print(count + "번째 문자열: ");

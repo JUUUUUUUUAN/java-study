@@ -19,7 +19,7 @@ public class Quiz1 {
 		int begin = sc.nextInt();
 		int end = sc.nextInt();
 		
-		Rectangle calc = new Rectangle();
+		Calculator calc = new Calculator();
 		System.out.println(calc.getEvenTotal(begin, end));
 	}
 }

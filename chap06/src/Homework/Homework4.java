@@ -10,17 +10,16 @@ public class Homework4 {
 		Scanner sc = new Scanner(System.in);
 		int[] lottoNum = new int[6];
 		
-		again: for (int i = 0; i < lottoNum.length; i++) {
-			lottoNum[i] = (int) (Math.random() * 44) + 1;
+		for (int i = 0; i < lottoNum.length; i++) {
+			// 1 ~ 45까지의 랜덤 숫자 6개 추가하기
+			lottoNum[i] = (int) (Math.random() * 44) + 1;	
 			
-			//중복 값 찾기
-//			for (int j = 0; j < lottoNum.length-1; j++) {
-//				if (lottoNum[i] == lottoNum[i+1]) {
-//					break again;
-//				}
-//			
+			// 중복값 찾기
+//			for(int j = ; j <= i; i++) {
+//				
 //			}
 		}
+		
 		// 정렬
 		Arrays.sort(lottoNum);
 		for (int i = 0; i <lottoNum.length; i++) {

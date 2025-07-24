@@ -10,17 +10,7 @@ public class Rectangle {
 	}
 	
 	void length() {
-		System.out.println("둘레: " + ( (width * 2) + (height *2) ));
-	}
-	
-	int getEvenTotal(int begin, int end) {
-		int sum = 0;
-		for (int i = begin; i <= end; i++) {
-			if(i % 2 == 0) {
-				sum += i;
-			}
-		}
-		return sum;
+		System.out.println("둘레: " +  (width + height) * 2 );
 	}
 	
 }
