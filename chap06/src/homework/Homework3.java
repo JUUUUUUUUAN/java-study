@@ -8,10 +8,9 @@ public class Homework3 {
 		// 올라갔다 내려갔다 
 		
 		Scanner sc = new Scanner(System.in);
-		boolean flag = true;
 		
-		while (flag) {
-			System.out.print("정수 :");
+		while (true) {
+			System.out.print("3이상의 홀수를 입력하세요 :");
 			int num = sc.nextInt();
 			
 			int count = 0;
@@ -26,7 +25,7 @@ public class Homework3 {
 				for (int i = 0; i < num / 2; i++) {
 					System.out.print((count - (i + 1)) + " ");
 				}
-				flag = false;
+				break;
 			}
 			
 		}
