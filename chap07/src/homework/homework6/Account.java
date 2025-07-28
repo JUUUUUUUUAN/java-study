@@ -12,7 +12,7 @@ public class Account {
 	}
 	
 	public void getter() {
-		
+		System.out.println(accountNumber + "계좌의 현재 잔액: " + balance);
 	}
 	
 	public void deposit(int amount) {
