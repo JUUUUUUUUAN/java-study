@@ -6,7 +6,8 @@ public class Dish extends Menu{
 	public Dish() {
 	}
 
-	public Dish(String ingredients) {
+	public Dish(String name, int price, String ingredients) {
+		super(name, price);
 		this.ingredients = ingredients;
 	}
 
@@ -20,6 +21,6 @@ public class Dish extends Menu{
 	
 	@Override
 	public void cook() {
-		System.out.println(super.toString() + "\n재료: " + ingredients);
+		System.out.println(super.toString() + "\n재료: " + ingredients + "\n");
 	}
 }

@@ -7,7 +7,7 @@ public class Drink extends Menu{
 		super();
 	}
 	
-	public Drink(String name, int price,String recipe) {
+	public Drink(String name, int price, String recipe) {
 		super(name, price);
 		this.recipe = recipe;
 	}
@@ -22,7 +22,7 @@ public class Drink extends Menu{
 
 	@Override
 	public void cook() {
-		System.out.println(super.toString() + "\n레시피: " + recipe);
+		System.out.println(super.toString() + "\n레시피: " + recipe + "\n");
 	}
 	
 }
