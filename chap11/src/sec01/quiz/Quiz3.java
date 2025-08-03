@@ -30,15 +30,21 @@ public class Quiz3 {
 	}
 
 	private static int count(String str1, String str2) {
-		
-		int nextNum = str1.indexOf(str2);
+		int nextNum = 0;
 		int count = 0;
+		nextNum = str1.indexOf(str2);
+		
 		while(nextNum != -1) {
+			if (nextNum == -1) break;
 			count++;
-			nextNum = str1.indexOf(str1, nextNum + 1);
-					
+			nextNum = str1.indexOf(str2, str1.indexOf(str2, nextNum)+ str2.length());
+			
+			
 		}
-			return count;
+		return count;
 	}
+	
+	
+	
 }
 

@@ -11,6 +11,7 @@ public class Homework6 {
 		
 		System.out.print("배열의 크기를 입력하세요 :");
 		int strNum = sc.nextInt();
+		sc.nextLine();
 		int count = 0;
 		int lastCount = 0;
 		
@@ -19,13 +20,13 @@ public class Homework6 {
 		for (int i = 0; i < arr.length; i++) {
 			count++;
 			System.out.print(count + "번째 문자열:");
-			arr[i] = sc.next();
+			arr[i] = sc.nextLine();
 		}
 		
 		// 배열 추가 여부
 		while (true) {	
 			System.out.print("더 값을 입력하시겠습니까?(Y/N) :");
-			String again = sc.next();
+			String again = sc.nextLine();
 			
 			// 배열 추가
 			int plusNum = 0; // 추가할 행
@@ -34,6 +35,7 @@ public class Homework6 {
 				
 				// 추가할 행
 				plusNum = sc.nextInt();
+				sc.nextLine();
 				// 행 추가하여 복사하기
 				arr = Arrays.copyOf(arr, count + plusNum);
 				
@@ -42,7 +44,7 @@ public class Homework6 {
 				for (int i = count; i < lastCount; i++) {
 					count++;
 					System.out.print(count + "번째 문자열: ");
-					arr[i] = sc.next();
+					arr[i] = sc.nextLine();
 				}
 				
 			} else if ("n".equalsIgnoreCase(again)) {

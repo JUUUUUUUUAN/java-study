@@ -25,25 +25,19 @@ public class Quiz2 {
 		String str2 = sc.nextLine();
 		deleteChar(str1, str2);
 						
-		private static void deleteChar(String str1, String str2) {
-			// TODO Auto-generated method stub
-			
-		}
+	}
+	
+	private static void deleteChar(String str1, String str2) {
+		String result = "";
 		
-//		String str = "1,2-3";
-//		String delete = ",-!";
-//		
-//		String result = "";
-//		
-//		for (int i = 0; i < str.length(); i++) {
-//			if (str.indexOf(delete.charAt(i)) != -1) {
-//				result += str.charAt(i);
-//			} 
-//		}
-//		System.out.println(result);
-//		
-//		
-//		
+		for (int i = 0; i < str1.length(); i++) {
+			char c = str1.charAt(i);
+			
+			if (str2.indexOf(c) == -1) {
+				result += c;
+			} 
+		}
+		System.out.println(result);
 		
 	}
 
