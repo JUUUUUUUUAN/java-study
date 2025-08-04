@@ -1,6 +1,5 @@
 package sec01.quiz;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class Quiz4 {
@@ -14,14 +13,15 @@ public class Quiz4 {
 		
 		System.out.print("반 전체 학생 수: ");
 		int num = sc.nextInt();
-		sc.nextLine();
+		sc.nextLine(); // 개행 문자 제거(버퍼 지우기)
+		
 		String[] studentArr = new String[num];
 		
 		for(int i = 0; i < studentArr.length; i++) {
 			studentArr[i] = sc.nextLine();
 		}
 		
-		int randomNum = (int) (Math.random() * ( num - 1)) + 1; 
+		int randomNum = (int) (Math.random() * num) ; 
 		System.out.println("커피 살 학생: " + studentArr[randomNum]);
 		
 		
