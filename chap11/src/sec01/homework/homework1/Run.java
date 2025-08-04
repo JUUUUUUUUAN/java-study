@@ -10,6 +10,13 @@ public class Run {
 		
 		String[] studentArr = str.split("\n");
 		
+		for (String s : studentArr) {
+			String[] str1 = s.split(",");
+			Person person1 = new Person(str1[0], Integer.parseInt(str1[1]), str1[2], str1[3].charAt(0));
+			System.out.println(person1.toString());
+		}
+		
+		
 		
 		
 		
