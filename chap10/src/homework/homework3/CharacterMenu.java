@@ -9,7 +9,7 @@ public class CharacterMenu {
 	CharacterController cc = new CharacterController();
 	try {
 		int count = cc.countAlpha(str);		
-		System.out.println();
+		System.out.println("'" + str + "'에 포함된 영문자 개수 :" + count );
 	} catch (CharCheckException e) {
 		e.printStackTrace();
 	}
