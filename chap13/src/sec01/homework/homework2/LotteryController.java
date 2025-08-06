@@ -16,7 +16,7 @@ public class LotteryController {
 		// 1. 전달 받은 l을 lottry HashSet에 추가
 		lottery.add(l);
 		// 2. 추가 결과를 boolean 값으로 반환
-		if (!lottery.isEmpty()) return true;
+		if (lottery.contains(l)) return true;
 		else return false;
 	}
 	
@@ -81,8 +81,8 @@ public class LotteryController {
 		// 1. win에 해당 객체가 있는지 확인
 		// 2. 결과 boolean을 리턴
 		boolean result;
-		if (win.contains(l)) result = false;
-		else result = true;
+		if (win.contains(l)) result = true;
+		else result = false;
 		return result;
 	}
 }
