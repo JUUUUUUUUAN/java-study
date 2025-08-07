@@ -3,6 +3,8 @@ package sec01.homework.homework2;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -16,8 +18,8 @@ public class LotteryController {
 		// 1. 전달 받은 l을 lottry HashSet에 추가
 		lottery.add(l);
 		// 2. 추가 결과를 boolean 값으로 반환
-		if (!lottery.isEmpty()) return true;
-		else return false;
+		if (lottery.contains(l)) return false;
+		else return true;
 	}
 	
 	public boolean deleteObject(Lottery l) {
@@ -58,10 +60,16 @@ public class LotteryController {
 		// 기존에 당첨된 사람은 제외
 		// 삭제된 사람의 자리만 새로운 추첨자로 채우기
 		List<Lottery> lotteryList = new ArrayList<Lottery>(lottery);
-		win.add(lotteryList.get(0));
-		win.add(lotteryList.get(1));
-		win.add(lotteryList.get(2));
-		win.add(lotteryList.get(3));
+//		win.add(lotteryList.get(0));
+//		win.add(lotteryList.get(1));
+//		win.add(lotteryList.get(2));
+//		win.add(lotteryList.get(3));
+		// Set 객체여서 어차피 중복 저장이 되지 않으니 랜덤으로 생성하면 된다.
+		while(win.size() < 4) {
+			int num = (int) (Math.random() * lottery.size());
+			win.add(lotteryList.get(num));				
+		}
+
 		return win;
 	}
 	
@@ -72,7 +80,7 @@ public class LotteryController {
 		// 이때, 미리 만들어진 win을 가지고 정렬
 		List<Lottery> sortedListWin = new ArrayList<Lottery>(win);
 		Collections.sort(sortedListWin);
-		Set<Lottery> sortedSetWin = new HashSet<Lottery>(sortedListWin);
+		Set<Lottery> sortedSetWin = new LinkedHashSet<Lottery>(sortedListWin);
 		
 		return sortedSetWin;
 	}
@@ -81,8 +89,8 @@ public class LotteryController {
 		// 1. win에 해당 객체가 있는지 확인
 		// 2. 결과 boolean을 리턴
 		boolean result;
-		if (win.contains(l)) result = false;
-		else result = true;
+		if (win.contains(l)) result = true;
+		else result = false;
 		return result;
 	}
 }

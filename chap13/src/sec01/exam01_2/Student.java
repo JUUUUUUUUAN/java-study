@@ -71,9 +71,9 @@ public class Student implements Comparable<Student>{
 //		return other.age - age;
 		
 		// 나이 오름차순을 비교 연산으로 구현 시 
-		if (age < other.age) return -1;
-		else if (age > other.age) return 1;
-		else return 0;
+//		if (age < other.age) return -1;
+//		else if (age > other.age) return 1;
+//		else return 0;
 		
 		// 문자열은 연산자로 비교 불가능
 		// String 클래스에 재정의된 compareTo() 사용
@@ -81,7 +81,7 @@ public class Student implements Comparable<Student>{
 		// 기준 문자열이 사전상 앞이면 그대로 유지
 //		"김재현".compareTo("박민수"); -> 음수 -> 그대로 유지
 		
-//		return name.compareTo(other.name); // 오름차순
+		return name.compareTo(other.name); // 오름차순
 //		return other.name.compareTo(name); // 내림차순
 		
 	}
