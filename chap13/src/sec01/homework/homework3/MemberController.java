@@ -1,7 +1,11 @@
 package sec01.homework.homework3;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.TreeMap;
 
 public class MemberController {
 	// HashMap 객체 생성
@@ -58,9 +62,25 @@ public class MemberController {
 		}
 		
 		public TreeMap<String,String> sameName(String name) {
-			// 1. 전달받은 name이 저장된 데이터의 이름과 같은지 확인
-			// 2. 전달받은 name과 저장된 데이터의 name이 같다면
+			Set<String> keyset = map.keySet();
+			Set<Map.Entry<String, Member>> entry = map.entrySet();
+			
+			Iterator<String> keyIterator = keyset.iterator();
+			while(keyIterator.hasNext()) {
+				String key = keyIterator.next();
+				Member m = map.get(key);
+				String entryName = m.getName();
+				String entryPw = m.getPassword();
+				// 1. 전달받은 name이 저장된 데이터의 이름과 같은지 확인
+				if (entryName.equals(name)) {
+					// 2. 전달받은 name과 저장된 데이터의 name이 같다면
+					TreeMap<String, Member> sameName = new TreeMap<String, Member>();
+					sameName.put(key, m);
+				}
+				
+			}
 			// -> key를 기준으로 오름차순 해주는 TreeMap 객체에 id와 이름 저장 후 객체 반환
 			// -> 엘리먼트를 하나씩 뽑아낼때 keySet()을 쓸 것
+			return sameName;
 		}
 }

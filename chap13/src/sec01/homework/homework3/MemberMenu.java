@@ -1,6 +1,8 @@
 package sec01.homework.homework3;
 
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class MemberMenu {
@@ -187,7 +189,7 @@ public class MemberMenu {
 			// 1. 검색할 이름을 받고 mc의 sameName()메소드로 넘김.
 			// -> mc의 sameName()은 TreeMap<String,String>을 리턴
 			String searchName = sc.nextLine();
-//			TreeMap<String, String> sameName = mc.sameName(searchName);
+			mc.sameName(searchName);
 			// 2. 반환 값을 가지고 entrySet()을 이용하여 ‘이름-아이디’ 형식으로 출력 
 		}
 }
