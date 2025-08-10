@@ -63,24 +63,32 @@ public class MemberController {
 		
 		public TreeMap<String,String> sameName(String name) {
 			Set<String> keyset = map.keySet();
-			Set<Map.Entry<String, Member>> entry = map.entrySet();
+			
+			Map<String, Member> sameName = LinkedList<String, Member>();
 			
 			Iterator<String> keyIterator = keyset.iterator();
 			while(keyIterator.hasNext()) {
 				String key = keyIterator.next();
 				Member m = map.get(key);
 				String entryName = m.getName();
-				String entryPw = m.getPassword();
+				
 				// 1. 전달받은 name이 저장된 데이터의 이름과 같은지 확인
 				if (entryName.equals(name)) {
 					// 2. 전달받은 name과 저장된 데이터의 name이 같다면
-					TreeMap<String, Member> sameName = new TreeMap<String, Member>();
 					sameName.put(key, m);
 				}
 				
 			}
+			
 			// -> key를 기준으로 오름차순 해주는 TreeMap 객체에 id와 이름 저장 후 객체 반환
-			// -> 엘리먼트를 하나씩 뽑아낼때 keySet()을 쓸 것
+			// -> 엘리먼트를 하나씩 뽑아낼때 keySet()을 쓸 것		
+			if (sameName s : sameName ) {
+				TreeMap<String,String> name = new TreeMap<String,String>();
+				String key = s.getKey();
+				Member m = map.get(key);
+				String name = m.getName();
+				name.put(key,name);
+			}
 			return sameName;
 		}
 }
