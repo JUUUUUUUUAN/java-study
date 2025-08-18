@@ -1,6 +1,7 @@
 package sec01.homework.homework3;
 
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeMap;
@@ -41,6 +42,7 @@ public class MemberMenu {
 				
 				if (num == 1) joinMember();
 				else if(num == 2) logIn();
+				else if(num == 3) sameName();
 				
 			}
 		}
@@ -115,7 +117,6 @@ public class MemberMenu {
 				if (result != null) {
 					System.out.println(result + "님, 환영합니다!");
 					memberMenu();
-					break;
 				}else {
 					System.out.println("틀린 아이디 또는 비밀번호입니다. 다시 입력해주세요.");
 					continue;
@@ -189,14 +190,15 @@ public class MemberMenu {
 			// 1. 검색할 이름을 받고 mc의 sameName()메소드로 넘김.
 			// -> mc의 sameName()은 TreeMap<String,String>을 리턴
 			String searchName = sc.nextLine();
-			TreeMap(<String, String> names = mc.sameName(searchName);
+			TreeMap<String, String> names = mc.sameName(searchName);
 			// 2. 반환 값을 가지고 entrySet()을 이용하여 ‘이름-아이디’ 형식으로 출력 
-			Map.Entry<String, String> entry = names.entrySet();
-			
-			if(entry.size > 0) {
-				System.out.println(entry.getKey + " - " + entry.getValue)
+			Set<Entry<String,String>> name = names.entrySet();
+			if (name.size() > 0) {
+				for (Entry<String, String> entry : name) {
+					System.out.println(entry.getKey() + "-" + entry.getValue());
+				}	
 			}else {
-				Sytem.out.println("해당 이름이 없습니다.")
+				System.out.println("이름이 없습니다.");
 			}
 			
 			
