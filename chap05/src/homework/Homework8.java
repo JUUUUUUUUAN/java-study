@@ -6,7 +6,6 @@ public class Homework8 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		boolean flag = true;
 		
 		while (true) {
 			System.out.print("문자열 :");
@@ -33,7 +32,7 @@ public class Homework8 {
 					break; // 바깥 while 문으로 다시 돌아감
 				} else {
 					System.out.println("잘못된 대답입니다. 다시 입력해주세요.");
-					continue;
+//					continue; 없어도 됨 => 뒤에 실행문이 없기떄문에 반복문이 계속 돌 것임
 				}
 			}
 			

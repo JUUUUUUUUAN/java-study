@@ -7,7 +7,7 @@ public class Homework3 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		for(;;) {
+		for (;;) {
 			System.out.print("입력 : ");
 			String input = sc.nextLine();
 			

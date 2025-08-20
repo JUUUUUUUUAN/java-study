@@ -13,13 +13,20 @@ public class Homework7 {
 			String output = "";
 			if (num <= 0) {
 				System.out.println("양수가 아닙니다.");
+				continue;
 			}
+			
+//			for (int i = 1; i <= num; i++) {
+//				if (i % 2 == 1) {
+//					output += "박";
+//				} else {
+//					output += "수";
+//				}
+//			}
+			
 			for (int i = 1; i <= num; i++) {
-				if (i % 2 == 1) {
-					output += "박";
-				} else {
-					output += "수";
-				}
+				output += ( i % 2 == 1) ? "박" : "수";
+//				System.out.print(i % 2 == 1 ? "박" : "수");
 			}
 			System.out.println(output);
 			break;

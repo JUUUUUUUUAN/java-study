@@ -23,23 +23,33 @@ public class Homework6 {
 		
 		double ave = ( sw1 + sw2 + db + lang + sys) / 5.0 ;
 		
-		if (ave >= 60) {
-			if ( sw1 >= 60 && sw2  >= 60 && db >= 60 && lang >= 60 && sys >= 60 ) {
-				System.out.println("합격을 축하합니다!");
-			} else if (sw1 < 40) {
-					System.out.println("소프트웨어설계 과목 과락으로 불합격입니다.");
-			} else if (sw2 < 40) {
-					System.out.println("소프트웨어개발 과목 과락으로 불합격입니다.");
-			} else if (db < 40) {
-					System.out.println("데이터베이스 과목 과락으로 불합격입니다.");
-			} else if (lang < 40) {
-					System.out.println("프로그래밍언어활용 과목 과락으로 불합격입니다.");
-			} else {
-				
-			}
-		} else {
-				System.out.println("평균 점수 60점 미만으로 불합격입니다.");
-		}
+//		처음 짠 코드 문제 발생(평균이 60점 미만일 경우 과락 과목이 출력되지 않는 오류 발생, 과락 과목 1개 누락포함) 
+//		=> 이경우 과락 먼저 코드 작성 후 (과락 과목이 있으면 평균은 비교 하지 않아도 됨 오류 발생줄고, 코드가 깔끔함) 평균 비교 진행하기
+//		if (ave >= 60) {
+//			if ( sw1 >= 40 && sw2  >= 40 && db >= 40 && lang >= 40 && sys >= 40 ) {
+//				System.out.println("합격을 축하합니다!");
+//			} else if (sw1 < 40) {
+//					System.out.println("소프트웨어설계 과목 과락으로 불합격입니다.");
+//			} else if (sw2 < 40) {
+//					System.out.println("소프트웨어개발 과목 과락으로 불합격입니다.");
+//			} else if (db < 40) {
+//					System.out.println("데이터베이스 과목 과락으로 불합격입니다.");
+//			} else if (lang < 40) {
+//					System.out.println("프로그래밍언어활용 과목 과락으로 불합격입니다.");
+//			} else {
+//				
+//			}
+//		} else {
+//				System.out.println("평균 점수 60점 미만으로 불합격입니다.");
+//		}
+		
+		if (sw1 < 40) System.out.println("소프트웨어설계 과목 과락으로 불합격입니다.");
+		else if (sw2 < 40) System.out.println("소프트웨어개발 과목 과락으로 불합격입니다."); 
+		else if (db < 40) System.out.println("데이터베이스 과목 과락으로 불합격입니다.");
+		else if (lang < 40) System.out.println("프로그래밍언어활용 과목 과락으로 불합격입니다.");
+		else if (sys < 40) System.out.println("정보시스템구출관리 과목 과락으로 불합격입니다.");
+		else if (ave >= 60) System.out.println("합격을 축하합니다!");
+		else System.out.println("평균 점수 60점 미만으로 불합격입니다.");
 	}
 
 }

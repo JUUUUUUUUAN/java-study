@@ -1,11 +1,13 @@
 package sec02.exam04;
 
+import java.util.Arrays;
+
 public class ArrayLengthExample {
 
 	public static void main(String[] args) {
 		int[] scores = {83, 90, 87};
-		scores = new int[] {83, 90, 87, 90}; // length 속성을 쓰면 배열이 변경됐을 때도 코드 변경이 없음
-		
+		scores = new int[] {10, 20, 30, 40}; // length 속성을 쓰면 배열이 변경됐을 때도 코드 변경이 없음 / 기존의 값도 변경되어도 상관없음
+//		System.out.println(Arrays.toString(scores));
 		int sum = 0;
 		
 //		for (int i = 0; i < 3; i++) { // 여기서 3은 배열 요소의 개수이므로 배열.length 속성을 활용하면 좋음

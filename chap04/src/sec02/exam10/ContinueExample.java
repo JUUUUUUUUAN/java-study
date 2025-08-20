@@ -30,6 +30,7 @@ public class ContinueExample {
 //		[출력]
 //		영희야생일축하해!
 		
+		System.out.print("문자열을 입력하세요: ");
 		Scanner sc = new Scanner(System.in);
 		
 		String str = sc.nextLine();

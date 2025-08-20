@@ -34,7 +34,7 @@ public class Homework2 {
 			} else if (tem >= 33) {
 				season += " 폭염 주의보";
 			}
-		} else if (month >= 8 && month <= 12) {
+		} else if (month >= 9 && month <= 11) {
 			season = "가을";
 		} else {
 			season = "겨울";
